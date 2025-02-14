@@ -4,9 +4,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { Product } from "../src/data";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { eliminarItem } from "../src/store/actions/cartActions";
+import { RootState } from "../src/store/store";
 
 export default function Cart() {
-  const { cart } = useSelector((store) => store.cartReducer);
+  const { cart } = useSelector((store: RootState) => store.cartReducer);
   console.log(JSON.stringify(cart, null, 2));
 
   const dispatch = useDispatch();
