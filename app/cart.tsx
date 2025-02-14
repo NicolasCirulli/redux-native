@@ -1,19 +1,18 @@
-import { View, Text, FlatList, Pressable } from "react-native";
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { View, Text, FlatList, Pressable } from "react-native";
+import { useSelector } from "react-redux";
 import { Product } from "../src/data";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { eliminarItem } from "../src/store/actions/cartActions";
 import { RootState } from "../src/store/store";
+import useCartActions from "../src/store/hooks/useActions";
 
 export default function Cart() {
   const { cart } = useSelector((store: RootState) => store.cartReducer);
-  console.log(JSON.stringify(cart, null, 2));
 
-  const dispatch = useDispatch();
+  const { eleminar } = useCartActions();
 
   const handlePress = (item: Product) => {
-    dispatch(eliminarItem(item.id));
+    eleminar(item);
   };
   return (
     <View>

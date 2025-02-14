@@ -3,13 +3,12 @@ import React from "react";
 import { Product, products } from "../../src/data";
 import { Link } from "expo-router";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { useDispatch } from "react-redux";
-import { agregarCarrito } from "../../src/store/actions/cartActions";
+import useCartActions from "../../src/store/hooks/useActions";
 export default function Products() {
-  const dispatch = useDispatch();
+  const cartActions = useCartActions();
 
   const handlePress = (item: Product) => {
-    dispatch(agregarCarrito(item));
+    cartActions.agregar(item);
   };
 
   return (

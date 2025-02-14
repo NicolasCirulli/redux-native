@@ -1,4 +1,4 @@
-import { View, Text, TextInput, ScrollView, Pressable } from "react-native";
+import { View, Text, TextInput, Pressable } from "react-native";
 import React from "react";
 import Ionicons from "@expo/vector-icons/Ionicons";
 export default function index() {
