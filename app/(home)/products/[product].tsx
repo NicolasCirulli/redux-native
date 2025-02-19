@@ -1,9 +1,9 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { useLocalSearchParams } from "expo-router";
-import { products } from "../../src/data";
+import { products } from "../../../src/data";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import useCartActions from "../../src/store/hooks/useActions";
+import useCartActions from "../../../src/store/hooks/useActions";
 export default function ProductDetails() {
   const { product } = useLocalSearchParams();
 
