@@ -23,6 +23,8 @@ export default function index() {
           .finally(() => {
             setAppIsReady(true);
           });
+      } else {
+        setAppIsReady(true);
       }
     });
   }, []);
