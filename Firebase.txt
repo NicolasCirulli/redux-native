@@ -1,0 +1,23 @@
+docs: 
+    - https://docs.expo.dev/guides/using-firebase/
+    - https://rnfirebase.io/
+    - https://rnfirebase.io/messaging/usage
+    - https://rnfirebase.io/migrating-to-v22
+    - https://firebase.google.com/docs/cloud-messaging/js/client
+
+1- Instalar dependencias
+    - firebase
+    - @react-native-firebase/app
+    - @react-native-firebase/messaging
+
+2- Crear proyecto en la consola de firebase
+   -https://console.firebase.google.com/
+
+3- Crear FirebaseConfig
+
+4- Agregar google-services.json y modificar app.json
+    - "googleServicesFile": "./google-services.json",
+    - agregar plugins 
+         "@react-native-firebase/app","@react-native-firebase/messaging"
+
+5- Configurar el codigo para que reaccione a las notificaciones
